@@ -12,6 +12,15 @@
 
 <body>
 
+  <input class="overlay-checkbox" type="checkbox" name="" id="overlayMenu">
+  <div class="overlay-menu">
+    Тут что-то должно быть наверное?
+
+    <label class="menu-burger menu-burger__close" for="overlayMenu">
+      <img src="./src/images/burger-button-close.svg" alt="" />
+    </label>
+  </div>
+
   <header class="header">
     <div class="header-wrapper">
       <div class="header-company company-wrapper">
@@ -23,6 +32,10 @@
       <button class="button-login">
         <span class="button-login__text">Войти</span>
       </button>
+
+      <label class="menu-burger menu-burger__open" for="overlayMenu">
+        <img src="./src/images/burger-button.svg" alt="" />
+      </label>
     </div>
 
   </header>
@@ -94,12 +107,12 @@
 
         <div class="logos-wrapper">
           <div class="logos-list">
-            <img src="./src/images/yandex-logo.svg" alt="" class="logos-wrapper__items" />
-            <img src="./src/images/disk-logo.png" alt="" class="logos-wrapper__items" />
-            <img src="./src/images/inst-logo.png" alt="" class="logos-wrapper__items" />
-            <img src="./src/images/vk-logo.svg" alt="" class="logos-wrapper__items" />
-            <img src="./src/images/my-logo.svg" alt="" class="logos-wrapper__items" />
-            <img src="./src/images/tiktok-logo.svg" alt="" class="logos-wrapper__items tiktok-logo" />
+            <img src="./src/images/yandex-logo.svg" alt="" class="logos-wrapper__item" />
+            <img src="./src/images/disk-logo.png" alt="" class="logos-wrapper__item" />
+            <img src="./src/images/inst-logo.png" alt="" class="logos-wrapper__item" />
+            <img src="./src/images/vk-logo.svg" alt="" class="logos-wrapper__item" />
+            <img src="./src/images/my-logo.svg" alt="" class="logos-wrapper__item" />
+            <img src="./src/images/tiktok-logo.svg" alt="" class="logos-wrapper__item tiktok-logo" />
           </div>
 
           <span class="logos-list__description">Десятки площадок</span>
@@ -297,6 +310,16 @@
               MarketGid
             </span>
           </div>
+
+          <div class="network-list__item">
+            <div class="network-logo__wrapper">
+              <img class="network-logo tiktok-logo" src="./src/images/tiktok-logo.svg" alt="" />
+            </div>
+
+            <span class="network-name">
+              TikTok
+            </span>
+          </div>
         </div>
 
         <div class="draw">
@@ -334,6 +357,26 @@
 
         <div class="vs-block">
           <img src="./src/images/arbitrage-house.svg" class="arbitrage-bg" alt="">
+
+
+          <input class="vs-radio vs-radio__left" checked type="radio" name="vsradio" value="left" id="vsRadioLeft">
+          <input class="vs-radio vs-radio__right" type="radio" name="vsradio" value="right" id="vsRadioRight">
+
+          <div class="labels-wrapper">
+            <label class="vs-label vs-label__left" for="vsRadioLeft">
+              <img src="./src/images/website-content.svg" alt="" class="vs-column__logo vs-logo__website">
+
+              <h5 class="vs-column__title">Сайт-витрина</h5>
+            </label>
+
+            <label class="vs-label vs-label__right" for="vsRadioRight">
+              <img src="./src/images/robot.svg" alt="" class="vs-column__logo vs-logo__robot">
+
+              <h5 class="vs-column__title">ЗаймоБот</h5>
+            </label>
+          </div>
+
+
 
           <div class="vs-column vs-column__left">
             <img src="./src/images/website-content.svg" alt="" class="vs-column__logo vs-logo__website">
@@ -427,5 +470,6 @@
   </footer>
 
 </body>
+<script src="./src/script/index.js"></script>
 
 </html>
