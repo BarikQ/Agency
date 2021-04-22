@@ -1440,7 +1440,7 @@ body {
   .vs-radio__right:checked~.labels-wrapper .vs-label__right {
     background: transparent;
     border: 1px solid white;
-    border-bottom: 1px solid black;
+    border-bottom: none;
     z-index: 10;
   }
 
