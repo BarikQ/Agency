@@ -1092,6 +1092,11 @@ body {
   display: none;
 }
 
+.phone-mobile,
+.manager-mobile {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .header-wrapper,
   .block-advantages__wrapper,
@@ -1669,23 +1674,35 @@ body {
   }
 
   .image-wrapper {
-    width: fit-content;
+    /* width: fit-content; */
     margin-top: 40px;
     justify-content: flex-start;
     background: none;
   }
 
   .image-wrapper__manager {
+    /* width: 220px; */
+    /* height: 210px; */
+    width: 70%;
     position: absolute;
     left: unset;
-    right: -90px;
+    right: -20px;
+    bottom: 0;
     z-index: 10;
-    width: 240px;
-    height: 240px;
+  }
+
+  .image-wrapper__manager:not(.manager-mobile),
+  .image-wrapper__phone:not(.phone-mobile) {
+    display: none;
+  }
+
+  .manager-mobile,
+  .phone-mobile {
+    display: block;
   }
 
   .image-wrapper__phone {
-    bottom: -90px;
+    bottom: 0;
   }
 
   .tg-link__text {
