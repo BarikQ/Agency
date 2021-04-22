@@ -1432,13 +1432,13 @@ body {
   }
 
   .vs-radio__left:checked~.labels-wrapper .vs-label__left {
-    background: black;
+    background: transparent;
     border: 1px solid white;
     border-bottom: none;
   }
 
   .vs-radio__right:checked~.labels-wrapper .vs-label__right {
-    background: black;
+    background: transparent;
     border: 1px solid white;
     border-bottom: 1px solid black;
     z-index: 10;
@@ -1577,6 +1577,11 @@ body {
     font-size: 15px;
   }
 
+  .block-stats__wrapper {
+    padding-top: 96px;
+    padding-bottom: 34px;
+  }
+
   .block-stats__wrapper::after {
     height: 358px;
     width: 66px;
@@ -1597,17 +1602,47 @@ body {
     /* background: rgba(16, 16, 24, 0.7); */
   }
 
+  .main-help {
+    padding-top: 32px;
+  }
+
+  .block-networks {
+    padding: 36px 0;
+  }
+
+  .block-wrapper__networks {
+    align-items: unset;
+  }
+
+  .networks-title {
+    text-align: start;
+  }
+
+  .networks-description {
+    text-align: start;
+    margin-top: 10px;
+  }
+  
+  .networks-list {
+    margin-top: 20px;
+  }
+
+  .draw {
+    margin-top: 25px;
+  }
+
+  .draw-text {
+    padding: 20px 0;
+  }
+
   .draw-button {
     height: 40px;
+    margin-top: 18px;
   }
 
   .draw-button__text {
     font-size: 20px;
     line-height: 20px;
-  }
-
-  .block-stats__wrapper {
-    padding-top: 106px;
   }
 
   .stats-button__wrapper {
@@ -1625,10 +1660,6 @@ body {
 
   .stats-numbers__item {
     margin: 12px 8px;
-  }
-
-  .block-stats__wrapper {
-    padding-bottom: 34px;
   }
 
   .stats-button__text {
@@ -1711,6 +1742,19 @@ body {
 
   .column-text_1 {
     text-align: start;
+  }
+
+  .vs-column {
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+
+  .vs-column__description {
+    padding: 0;
+  }
+
+  .block-wrapper__platforms {
+    padding-bottom: 100px;
   }
 }
 
