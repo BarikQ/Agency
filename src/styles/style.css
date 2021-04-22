@@ -1485,6 +1485,22 @@ body {
   .footer {
     padding: 15px 0;
   }
+
+  .main-help {
+    background: url('./../images/bg_4_completed.png');
+    background-size: cover;
+  }
+
+  .help-bg,
+  .stats__bg {
+    display: none;
+  }
+
+  .main-block__stats {
+    background: url('./../images/Group 101.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 590px) {
@@ -1498,13 +1514,17 @@ body {
     display: block;
   }
 
-  .overlay-menu {
-    display: block;
-    position: fixed;
+  .stats__bglogo {
+    display: none;
   }
 
   .button-login {
-    display: none;
+    width: 90px;
+  }
+
+  .overlay-menu {
+    display: block;
+    position: fixed;
   }
 
   .block-header,
