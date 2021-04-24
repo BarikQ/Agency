@@ -790,7 +790,7 @@ body {
 .draw-text {
   grid-area: 1/6/2/13;
   margin-left: 6.9%;
-  /* padding: 44px 0; */
+  padding: 20px 0;
 }
 
 .draw-title {
@@ -1349,8 +1349,12 @@ body {
   }
 
   .draw-text {
-    margin: 20px 0 0;
-    padding-bottom: 0;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+
+  .draw-description {
+    margin-top: 15px;
   }
 
   .network-logo__wrapper {
@@ -1407,6 +1411,7 @@ body {
   }
 
   .image-wrapper__manager {
+    left: 30px;
   }
 
   .networks-list {
