@@ -150,6 +150,8 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -597,6 +599,8 @@ body {
   height: 242px;
   display: flex;
   margin-top: 15px;
+  margin-left: 29px;
+  padding-right: 40px;
   align-items: flex-end;
   position: relative;
   border-radius: 8px;
@@ -688,10 +692,13 @@ body {
   width: 100%;
   /* height: 168px; */
   margin-top: 46px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 167px);
+  grid-gap: 15px;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  /* grid-row-gap: 15px; */
 }
 
 .network-logo__wrapper {
@@ -768,15 +775,22 @@ body {
 }
 
 .draw {
-  display: flex;
-  /* align-items: center; */
   margin-top: 86px;
+  display: grid;
+  grid-template: 1fr / repeat(12, 1fr);
+  align-items: center;
   background: #F5F5F5;
 }
 
+.draw-image {
+  grid-area: 1/1/2/6;
+  max-width: 100%;
+}
+
 .draw-text {
-  margin-left: 4.6%;
-  padding: 44px 0;
+  grid-area: 1/6/2/13;
+  margin-left: 6.9%;
+  /* padding: 44px 0; */
 }
 
 .draw-title {
@@ -894,10 +908,9 @@ body {
   color: #FFFFFF;
 }
 
-
 .vs-column__description {
   margin-top: 10px;
-  padding-right: 36px;
+  padding-right: 10px;
   font-family: HelveticaNeueCyr;
   font-style: normal;
   font-weight: 300;
@@ -920,14 +933,47 @@ body {
   color: #FFFFFF;
 }
 
+.vs-advantages {
+  grid-column-gap: 130px;
+  position: relative;
+  left: 20px;
+  margin-top: 32px;
+}
+
+.vs-advantages>.vs-list__item:nth-child(odd) {
+  left: 7px;
+  display: block;
+  max-width: 378px;
+}
+
+.vs-advantages>.vs-list__item:nth-child(even) {
+  left: 0;
+  display: block;
+  max-width: 460px;
+}
+
 .vs-item__description {
   font-weight: 400;
   margin-top: 9px;
 }
 
+.vs-item__description br {
+  display: none;
+}
+
 .platforms-description {
   text-align: center;
   margin-top: 24px;
+}
+
+.vs-block-tablet {
+  display: none !important;
+}
+
+.vs-advantages {
+  grid-area: 2/1/3/4;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
 .vs-block {
@@ -961,7 +1007,7 @@ body {
 }
 
 .vs-column__left {
-  padding-left: 61px;
+  padding-left: 26px;
   grid-area: 1/1/2/2;
 }
 
@@ -987,10 +1033,6 @@ body {
 .vs-logo__robot {
   left: 38px;
   top: -1px;
-}
-
-.vs-column__list {
-  margin-top: 33px;
 }
 
 .vs-item__title {
@@ -1028,7 +1070,7 @@ body {
 }
 
 .arbitrage-bg {
-  width: 92%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1097,6 +1139,7 @@ body {
   display: none;
 }
 
+
 @media (max-width: 1200px) {
   .header-wrapper,
   .block-advantages__wrapper,
@@ -1110,12 +1153,33 @@ body {
     max-width: unset;
   }
 
+  .image-wrapper {
+    margin-left: 0;
+    padding-right: 20px;
+  }
+  
+  .draw-description {
+    padding-right: 15px;
+  }
+
+  .draw-image {
+    width: 100%;
+  }
+
   .image-wrapper__phone {
     left: 0;
   }
 
   .vs-block br {
     display: none;
+  }
+
+  .scheme-block__wrapper {
+    max-width: 33%;
+  }
+
+  .scheme-block__title {
+    white-space: nowrap;
   }
 }
 
@@ -1167,9 +1231,8 @@ body {
     width: 100%;
     height: 242px;
     box-sizing: border-box;
-    /* padding: 0 50px; */
     display: flex;
-    margin-top: 15px;
+    margin-top: 45px;
     align-items: flex-end;
     justify-content: flex-end;
     position: relative;
@@ -1188,14 +1251,42 @@ body {
   }
 
   .draw-image {
-    width: 50%;    
+    /* width: 50%;     */
+  }
+  
+  .vs-block-desktop {
+    padding: 0;
+  }
+
+  .vs-list__item {
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
+  .vs-column__description {
+    margin-top: 35px;
+  }
+
+  .vs-column__list {
+    margin-top: 24px;
+  }
+
+  .vs-list__item {
+    margin-bottom: 30px;
+  }
+
   .vs-column__left,
   .vs-column__right {
     padding: 0;
+  }
+
+  .vs-block-desktop {
+    display: none !important;
+  }
+
+  .vs-block-tablet {
+    display: unset !important;
   }
 
   .stats-numbers__list {
@@ -1246,6 +1337,7 @@ body {
   }
 
   .draw {
+    display: flex;
     flex-direction: column;
     background: none;
     margin-top: 40px;
@@ -1253,10 +1345,11 @@ body {
 
   .draw-image {
     width: 100%;
+    border-radius: 6px;
   }
 
   .draw-text {
-    margin: 0;
+    margin: 20px 0 0;
     padding-bottom: 0;
   }
 
@@ -1317,19 +1410,23 @@ body {
   }
 
   .networks-list {
-    justify-content: center;
+    grid-row-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 140px);
+    grid-gap: 10px;
+    justify-content: space-around;
   }
 
   .network-list__item {
-    margin: 10px 0;
+    /* margin: 10px 0; */
   }
 
   .networks-list>.network-list__item:nth-child(odd) {
-    margin-right: 5px;
+    /* margin-right: 5px; */
   }
 
   .networks-list>.network-list__item:nth-child(even) {
-    margin-left: 5px;
+    /* margin-left: 5px; */
   }
 
   .network-name {
@@ -1364,11 +1461,13 @@ body {
 
   .vs-block {
     display: grid;
-    grid-template: repeat(2, auto) / auto ;
+    grid-template: repeat(2, auto) / auto;
+    padding: 0;
   }
   
   .vs-label {
-    width: 140px;
+    /* width: 140px; */
+    width: 100%;
     height: 94px;
     display: flex;
     justify-content: center;
@@ -1403,8 +1502,9 @@ body {
   }
 
   .labels-wrapper {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 10px;
     grid-area: 1/1/2/3;
   }
 
@@ -1418,14 +1518,6 @@ body {
 
   .vs-label {
     position: relative;
-  }
-
-  .labels-wrapper .vs-label__left {
-    margin-right: 5px;
-  }
-
-  .labels-wrapper .vs-label__left {
-    margin-left: 5px;
   }
   
   .vs-radio__left:checked~.vs-column__left {
@@ -1563,6 +1655,15 @@ body {
     position: fixed;
   }
 
+  .block-header {
+    text-align: start;
+  }
+  
+  .footer .company-wrapper__title {
+    font-size: 27px;
+    line-height: 34px;
+  }
+
   .block-header,
   .heading,
   .help-paragraph,
@@ -1581,6 +1682,14 @@ body {
   .draw-description {
     font-size: 15px;
   }
+
+  .scheme-block__wrapper {
+    max-width: unset;
+  }
+
+  .scheme-block__title {
+    white-space: unset;
+  }  
 
   .block-stats__wrapper {
     padding-top: 96px;
@@ -1630,6 +1739,7 @@ body {
   
   .networks-list {
     margin-top: 20px;
+    justify-content: center;
   }
 
   .draw {
