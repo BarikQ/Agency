@@ -502,13 +502,12 @@ body {
 
 .scheme-line__2 {
   grid-area: 3/1/4/4;
-  margin-top: -10px;
+  /* margin-top: -10px; */
 }
 
 .scheme-line__3 {
   grid-area: 5/1/6/4;
-  margin-top: -17px;
-  margin-bottom: -8px;
+  /* margin-bottom: -8px; */
 }
 
 .scheme-wrapper__graph {
@@ -516,7 +515,6 @@ body {
 }
 
 .graph {
-  grid-row-gap: 20px; /* 27 */
   /* max-width: 698px; */
   width: 100%;
   display: flex;
@@ -527,15 +525,20 @@ body {
 
 .company-logo {
   grid-area: 4/1/5/4;
-  margin-top: -17px;
+  margin: 6px 0 3px;
 }
 
 .blocks {
   width: 100%;
   max-width: 630px;
+  margin: 20px 0 6px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.graph>.blocks:last-child {
+  margin: 13px 0 0px;
 }
 
 .main-help {
@@ -1891,6 +1894,14 @@ body {
 
   .block-wrapper__platforms {
     padding-bottom: 100px;
+  }
+
+  .blocks {
+    margin: 10px 0 0 !important;
+  }
+
+  .scheme-block__wrapper {
+    max-width: 33%;
   }
 }
 
