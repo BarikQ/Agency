@@ -1222,7 +1222,7 @@ body {
   }
 
   .text-wrapper {
-    max-width: 290px;
+    max-width: 70%;
     margin-right: 0;
   }
 
@@ -1630,6 +1630,11 @@ body {
   .scheme-wrapper {
     grid-column-gap: 30px;
   }
+  
+  .footer .company-wrapper__title {
+    font-size: 27px !important;
+    line-height: 34px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -1662,11 +1667,6 @@ body {
 
   .block-header {
     text-align: start;
-  }
-  
-  .footer .company-wrapper__title {
-    font-size: 27px;
-    line-height: 34px;
   }
 
   .block-header,
@@ -1719,6 +1719,10 @@ body {
   .header-wrapper .menu-burger {
     /* box-shadow: 0 0 10px 0px black; */
     /* background: rgba(16, 16, 24, 0.7); */
+  }
+
+  .text-wrapper {
+    max-width: unset;
   }
 
   .main-help {
