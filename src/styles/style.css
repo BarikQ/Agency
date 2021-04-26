@@ -523,9 +523,19 @@ body {
   align-items: center;
 }
 
-.company-logo {
+.company-logo__wrapper {
   grid-area: 4/1/5/4;
   margin: 6px 0 3px;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / auto auto;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo__text {
+  height: 25px;
 }
 
 .blocks {
@@ -1843,6 +1853,14 @@ body {
 
   .logos-wrapper__item {
     max-height: 32px;
+  }
+
+  .company-logo {
+    height: 34px;
+  }
+
+  .company-logo__text {
+    height: 20px;
   }
 
   .scheme-wrapper {
